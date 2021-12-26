@@ -1,0 +1,30 @@
+{
+  "name": "lsystems-3d",
+  "version": "1.0.0",
+  "description": "lsystems",
+  "source": "src/index.html",
+  "browserslist": "> 0.5%, last 2 versions, not dead",
+  "scripts": {
+    "start": "parcel",
+    "build": "parcel build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tswistak/lsystems-3d.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tswistak/lsystems-3d/issues"
+  },
+  "homepage": "https://github.com/tswistak/lsystems-3d#readme",
+  "devDependencies": {
+    "parcel": "^2.0.1",
+    "prettier": "^2.5.1"
+  },
+  "dependencies": {
+    "lindenmayer": "^1.5.4",
+    "three": "^0.135.0"
+  }
+}
