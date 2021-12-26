@@ -81,12 +81,10 @@ export const data = {
       S: "SFS",
       O: "[&&&E'/W////W////W////W////W]",
       E: "FF",
-      W: "['^F]W",
     },
     models: {
       F: cylinder,
       L: leaf,
-      W: sphere,
     },
     angle: 18,
     maxIterations: 7,

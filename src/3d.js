@@ -1,6 +1,6 @@
 import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
-import { LENGTH } from "./geometry";
+import { leaf, LENGTH } from "./geometry";
 
 let renderer;
 let scene;
@@ -69,14 +69,18 @@ export function forward(meshGenerator) {
 
     const position = new THREE.Vector3(LENGTH / 2, 0, 0);
     position.applyQuaternion(currentRotation);
-    currentPosition.add(position);
+    if (meshGenerator !== leaf) {
+      currentPosition.add(position);
+    }
 
     if (meshGenerator) {
       const newMesh = meshGenerator();
       newMesh.quaternion.copy(currentRotation);
       newMesh.position.copy(currentPosition);
 
-      currentPosition.add(position);
+      if (meshGenerator !== leaf) {
+        currentPosition.add(position);
+      }
 
       mesh.add(newMesh);
     }
