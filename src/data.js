@@ -90,4 +90,27 @@ export const data = {
     maxIterations: 7,
     redraw: false,
   },
+  plant2: {
+    axiom: "P",
+    productions: {
+      P: "I+[P+O]--//[--L]I[++L]-[PO]++PO",
+      I: "FS[//&&L][//^^L]FS",
+      S: {
+        successors: [
+          { weight: 33, successor: "[//&&L][//^^L]FS" },
+          { weight: 33, successor: "SFS" },
+          { weight: 33, successor: "S" },
+        ],
+      },
+      O: "[&&&E'/W////W////W////W////W]",
+      E: "FF",
+    },
+    models: {
+      F: cylinder,
+      L: leaf,
+    },
+    angle: 18,
+    maxIterations: 7,
+    redraw: true,
+  },
 };
