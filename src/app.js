@@ -34,7 +34,7 @@ function draw() {
       f: forward,
       L: lData.models.L ? forward(lData.models.L) : noop,
       S: lData.models.S ? forward(lData.models.S) : noop,
-      W: lData.models.W ? forward(lData.models.W) : noop,
+      X: lData.models.X ? forward(lData.models.X) : noop,
       "+": rotate("z", lData.angle),
       "-": rotate("z", -lData.angle),
       "&": rotate("y", lData.angle),
